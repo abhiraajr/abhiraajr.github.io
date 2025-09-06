@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-<style>
-   .logo{
-      border-radius: 200px;
-   }
-</style>
-
 <head>
    {% if site.google_analytics %}
    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -20,7 +14,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" type="image/x-icon" href="{{site.logo | relative_url}}" class="logo">
+   <link rel="icon" type="image/x-icon" href="{{site.logo | relative_url}}">
    {% seo %}
    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
    <!--[if lt IE 9]>
@@ -28,6 +22,11 @@
    <![endif]-->
 </head>
 <body>
+   <style>
+      .logo{
+         border-radius: 200px;
+      }
+   </style>
    <div class="wrapper">
       <header>
          <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
