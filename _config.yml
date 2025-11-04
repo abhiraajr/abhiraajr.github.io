@@ -2,11 +2,9 @@ title: Abhiraaj Rampal # your name (or website title) here
 logo: "/images/logo.png?raw=true" # your photo (or logo) here
 favicon: "/images/favicon.png?raw=true" # tab icon (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Abhiraaj Rampal's Portfolio
   <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://github.com/abhiraajr">View My Github Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
