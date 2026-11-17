@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://abhiraajr.github.io/</loc>
-    <lastmod>2026-11-16</lastmod>
-    <priority>1.00</priority>
-  </url>
+  <url><loc>https://abhiraajr.github.io/</loc><lastmod>2026-11-16</lastmod><priority>1.00</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/avacado.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/snacked.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/care.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/cliq.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/bizy.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/unity-games.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
+  <url><loc>https://abhiraajr.github.io/projects/tjtakes.html</loc><lastmod>2026-11-16</lastmod><priority>0.60</priority></url>
 </urlset>

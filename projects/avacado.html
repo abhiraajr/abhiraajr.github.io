@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVACADO: AI Phone Receptionist | Abhiraaj Rampal</title>
+  <meta name="description" content="AVACADO, an AI phone receptionist platform for small businesses, built with React, FastAPI and Supabase.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">ABHIRAAJ</a>
+  <div class="links"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="https://github.com/abhiraajr">GitHub</a></div>
+</div></nav>
+<main class="wrap page">
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+  <h1>AVACADO: AI Phone Receptionist</h1>
+  <div class="meta"><span class="status s-paused">Paused</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">Supabase</span></div>
+  <p>A plug-and-play AI employee that answers inbound phone calls for a small business. The owner sets the AI's personality, rules and knowledge in a simple dashboard, with no technical setup. My pitch was a friendlier layer on top of developer-focused voice-AI tools.</p>
+  <h2>What's built</h2>
+  <ul>
+    <li>A React dashboard with sign-in, agent configuration and phone-number management</li>
+    <li>A FastAPI backend with Supabase (Postgres + auth) and hand-written SQL migrations</li>
+    <li>Agent settings synced to a third-party voice provider (Retell) behind my own provider abstraction, so the provider can be swapped</li>
+    <li>Phone-number provisioning, webhook ingestion and a calls API</li>
+  </ul>
+  <h2>Where it stands</h2>
+  <p>No real phone call has gone through it yet. That is the milestone I stopped at, and I treat the MVP as unfinished until one does. The blocker was setting up billing on the voice provider's account, not the code. I also haven't talked to customers or set pricing.</p>
+  <h2>Decisions I made</h2>
+  <ul>
+    <li>Build on top of an existing voice provider instead of competing with it</li>
+    <li>Keep the provider invisible to customers</li>
+    <li>One user per business for the MVP</li>
+    <li>Build the workflow builder last, after a real call works</li>
+  </ul>
+  <h2>What I learned</h2>
+  <ul>
+    <li>Large parts of what I wanted already existed, so the real question is why a customer would pick mine. I should have asked that before building the dashboard.</li>
+    <li>Stopping before the last step (the first live call) is exactly the 20% habit I'm working on breaking.</li>
+  </ul>
+  <h2>Stack</h2>
+  <p>React 19, TypeScript, Vite, Tailwind 4, Python FastAPI, Supabase, Retell. Code is local and not public.</p>
+
+</main>
+<footer><div class="wrap">&copy; 2026 Abhiraaj Rampal &middot; <a href="https://github.com/abhiraajr">github.com/abhiraajr</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SNACKED: Lunch Snack Pre-Order App | Abhiraaj Rampal</title>
+  <meta name="description" content="SNACKED, a lunch snack pre-order web app built with Google Apps Script and Supabase.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">ABHIRAAJ</a>
+  <div class="links"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="https://github.com/abhiraajr">GitHub</a></div>
+</div></nav>
+<main class="wrap page">
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+  <h1>SNACKED: Lunch Snack Pre-Order App</h1>
+  <div class="meta"><span class="status s-built">Built</span><span class="chip">Google Apps Script</span><span class="chip">Supabase</span><span class="chip">JavaScript</span></div>
+  <p>A web app where customers reserve snacks before lunch and pay at pickup, while admins manage stock and orders from a dashboard.</p>
+  <h2>How it works</h2>
+  <ul>
+    <li>One web address routes people automatically: admins land on the dashboard, customers with an order land on the edit-order page, and everyone else sees the storefront</li>
+    <li>Reserving a snack lowers its stock, cancelling puts it back, and marking an order as bought finalizes it</li>
+    <li>Each order is tied to the customer's signed-in Google account, with a limit of one of each snack per order</li>
+    <li>The admin side can restock, delete orders and preview exactly what customers see</li>
+  </ul>
+  <h2>Version history</h2>
+  <ul>
+    <li>v1 to v2: storefront and admin on top of a Google Sheet</li>
+    <li>v3: admin customer-view preview</li>
+    <li>v4: one order per account and editing an existing order</li>
+    <li>v6: moved the data to Supabase with live customer data</li>
+  </ul>
+  <h2>What I learned</h2>
+  <ul>
+    <li>Google's signed-in email can come back empty depending on deploy settings, so admin access has to be tested with the real admin account after every deployment.</li>
+    <li>Two people can take the last item at the same time unless the stock update is wrapped in a lock.</li>
+    <li>Secrets belong in script properties, never in the code file.</li>
+  </ul>
+  <h2>Stack</h2>
+  <p>Google Apps Script (server and HTML pages) with Supabase for the database. Code is local and not public.</p>
+
+</main>
+<footer><div class="wrap">&copy; 2026 Abhiraaj Rampal &middot; <a href="https://github.com/abhiraajr">github.com/abhiraajr</a></div></footer>
+</body>
+</html>
