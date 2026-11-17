@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RServer: Self-Built Home Server | Abhiraaj Rampal</title>
+  <meta name="description" content="RServer, a private home server I built and hardened on a spare laptop with Ubuntu Server, Docker and Tailscale.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">ABHIRAAJ</a>
+  <div class="links"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="https://github.com/abhiraajr">GitHub</a></div>
+</div></nav>
+<main class="wrap page">
+  <a class="back" href="../index.html#projects">&larr; All projects</a>
+  <h1>RServer: Self-Built Home Server</h1>
+  <div class="meta"><span class="status s-built">Running</span><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">Tailscale</span><span class="chip">Security</span></div>
+  <p>A private server running on an old laptop. I wiped Windows, installed Ubuntu Server, and have been building it up in phases, one working result at a time. It started on 2026-11-06, and I keep a full log of every decision in my notes.</p>
+  <h2>What's running</h2>
+  <ul>
+    <li>Ubuntu Server 26.04 LTS on a Dell laptop, wired over Ethernet with Wi-Fi as a fallback, and it powers itself back on after a real power cut</li>
+    <li>Docker for apps, with Uptime Kuma monitoring and AdGuard Home for DNS filtering</li>
+    <li>Tailscale for private access from my PC and phone, with a policy that only lets devices reach the server</li>
+    <li>Alerts by Telegram, plus an outside heartbeat check that fires if the monitor itself goes quiet</li>
+    <li>Nightly encrypted backups with restic to an external drive, and I tested a full restore</li>
+  </ul>
+  <h2>Security work</h2>
+  <ul>
+    <li>SSH with keys only, and password logins off</li>
+    <li>A firewall that only allows what's needed, with SSH limited to home and my private network</li>
+    <li>A first security audit with external port scans and a Linux hardening scan, then fixes from the results</li>
+  </ul>
+  <h2>Things that broke, and what I learned</h2>
+  <ul>
+    <li>Wi-Fi wouldn't connect for hours. The root cause was one missing package, found and fixed from a USB stick.</li>
+    <li>DNS lookups started failing after I changed DNS settings for AdGuard, because Tailscale quietly took over the resolver. The fix was to turn off its DNS takeover. I wrote up the whole timeline.</li>
+    <li>Exposing a server to the internet should wait until a list of gates is closed, so I wrote the gates down first.</li>
+  </ul>
+  <h2>What's next</h2>
+  <p>RServer Cloud: a family file and photo cloud that I decided to build myself instead of using an existing product. It is private to my own network, never public, and it's in the design stage. I haven't started building it yet, so I'm not listing it as a feature.</p>
+  <h2>Not done yet</h2>
+  <ul>
+    <li>A BIOS update is on hold until I replace the laptop battery</li>
+    <li>A second backup drive and an off-site backup copy</li>
+    <li>Blocking the server from reaching the rest of my home network</li>
+  </ul>
+
+</main>
+<footer><div class="wrap">&copy; 2026 Abhiraaj Rampal &middot; <a href="https://github.com/abhiraajr">github.com/abhiraajr</a></div></footer>
+</body>
+</html>
