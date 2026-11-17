@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="xzy1pfBXqm6y7XJ8DSl8UpbUoHqnUU1dlcP2XEBdoYI" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abhiraaj Rampal | Software &amp; Prototyping</title>
+  <meta name="description" content="Abhiraaj Rampal builds software and physical prototypes: a LEGO color sorter, a 3D model viewer, 3D printed fidgets, and web apps.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="canonical" href="https://abhiraajr.github.io/">
+  <style>
+    :root {
+      --bg: #070d17;
+      --panel: #0d1727;
+      --line: #1a2a42;
+      --text: #e6edf6;
+      --muted: #8fa1b8;
+      --accent: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+    nav { border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    nav .brand { font-weight: 700; letter-spacing: .04em; color: var(--text); }
+    nav .links a { margin-left: 22px; color: var(--muted); font-size: .95rem; }
+    nav .links a:hover { color: var(--accent); text-decoration: none; }
+
+    header.hero { padding: 72px 0 56px; }
+    .hero-grid { display: flex; gap: 40px; align-items: center; }
+    .hero img { width: 150px; height: 150px; border-radius: 50%; border: 2px solid var(--line); flex: none; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 8px; line-height: 1.1; }
+    .hero .tag { color: var(--accent); font-weight: 600; margin: 0 0 14px; }
+    .hero p { color: var(--muted); margin: 0 0 20px; max-width: 560px; }
+    .btn {
+      display: inline-block; padding: 9px 18px; border-radius: 8px;
+      border: 1px solid var(--accent); color: var(--accent); font-weight: 600; margin-right: 10px;
+    }
+    .btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.5rem; margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 28px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px; display: flex; flex-direction: column;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .card p { margin: 0 0 14px; color: var(--muted); font-size: .95rem; flex: 1; }
+    .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 12px; }
+    .chip { font-size: .75rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+    .status { font-size: .75rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+    .s-built { background: rgba(34,211,238,.12); color: var(--accent); }
+    .s-wip { background: rgba(250,204,21,.12); color: #facc15; }
+    .s-paused { background: rgba(148,163,184,.15); color: #94a3b8; }
+    .card .link { font-size: .9rem; font-weight: 600; }
+    .card .private { font-size: .85rem; color: var(--muted); }
+
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .skills h3 { font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+    .skills ul { list-style: none; margin: 0; padding: 0; color: var(--muted); }
+    .skills li { padding: 3px 0; }
+
+    .honest { background: var(--panel); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 10px 10px 0; color: var(--muted); }
+    .honest strong { color: var(--text); }
+
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 640px) {
+      .hero-grid { flex-direction: column; text-align: center; align-items: center; }
+      nav .links a { margin-left: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">ABHIRAAJ</a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/abhiraajr">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <img src="images/logo.png" alt="Abhiraaj logo">
+    <div>
+      <h1>Abhiraaj Rampal</h1>
+      <p class="tag">Software &amp; prototyping</p>
+      <p>I've been coding since 2021, starting on Scratch. I like building things people actually use, from web apps to 3D printed products to a LEGO sorting machine that physically moves pieces.</p>
+      <a class="btn" href="#projects">See my work</a>
+      <a class="btn" href="https://github.com/abhiraajr">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Each one is labeled with where it actually stands.</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>LEGO Color Sorter</h3>
+        <div class="meta"><span class="status s-built">Prototype built</span><span class="chip">Hardware</span></div>
+        <p>A physical machine that sorts LEGO pieces by a color you pick. A gate accepts or rejects each piece as it passes. My first build where code had to move something real.</p>
+        <a class="link" href="https://github.com/abhiraajr/LegoColorSorter">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <h3>Orbit3D</h3>
+        <div class="meta"><span class="status s-built">Built</span><span class="chip">HTML</span><span class="chip">JavaScript</span></div>
+        <p>A 3D model viewer that runs in the browser. A menu in the corner switches between models in formats like STL, OBJ and GLB.</p>
+        <a class="link" href="https://github.com/abhiraajr/Orbit3D">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <h3>Joy-Con Controller Wheel</h3>
+        <div class="meta"><span class="status s-built">Designed</span><span class="chip">3D modeling</span></div>
+        <p>A steering wheel for Joy-Con controllers that I modeled myself in 3D, shown in the Orbit3D viewer with built and parts views.</p>
+        <a class="link" href="https://github.com/abhiraajr/Joy-Con-Controller-Wheel">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <h3>CLIQ Key Clicker Fidgets</h3>
+        <div class="meta"><span class="status s-built">Selling</span><span class="chip">3D printing</span><span class="chip">Product design</span></div>
+        <p>Keyboard-switch clicker fidgets that I design, 3D print and sell at school in custom colors. Includes a parametric spring generator I used to tune the click feel, and an order form I built for it.</p>
+        <span class="private">First sales April 2026</span>
+      </div>
+
+      <div class="card">
+        <h3>SNACKED</h3>
+        <div class="meta"><span class="status s-built">Built</span><span class="chip">Apps Script</span><span class="chip">Supabase</span></div>
+        <p>A lunch snack pre-order web app: customers reserve snacks, admins manage stock and orders from a dashboard. Started on Google Sheets and moved to a Supabase backend in v6.</p>
+        <span class="private">Code is not public</span>
+      </div>
+
+      <div class="card">
+        <h3>AVACADO</h3>
+        <div class="meta"><span class="status s-paused">Paused</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span></div>
+        <p>An AI phone receptionist platform for small businesses. The dashboard, backend, auth and agent setup are built. It hasn't taken a real call yet, and that's the milestone I stopped short of.</p>
+        <span class="private">Code is not public</span>
+      </div>
+
+      <div class="card">
+        <h3>Data Center Cooling Research</h3>
+        <div class="meta"><span class="status s-wip">In progress</span><span class="chip">Group research</span></div>
+        <p>A group project comparing CO2 and liquefied natural gas for cooling data centers. We're leaning toward a closed-loop CO2 system.</p>
+      </div>
+
+      <div class="card">
+        <h3>Chestnut</h3>
+        <div class="meta"><span class="status s-wip">Early stage</span><span class="chip">Startup</span></div>
+        <p>A pooled pre-order food pickup service I'm co-founding: combine bulk restaurant orders into one scheduled drop with QR pickup. The first model hit a school rule, so we're reworking it.</p>
+      </div>
+
+      <div class="card">
+        <h3>Unity Games</h3>
+        <div class="meta"><span class="status s-built">Learning projects</span><span class="chip">C#</span><span class="chip">Unity</span></div>
+        <p>Unity pathway and prototypes, plus Jump. Spend. Evolve., my own game on top of a runner prototype with a title screen, score, pause and restart.</p>
+        <span class="private">Repos are private</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">Languages I've written real code in, and the tools around them.</p>
+    <div class="skills">
+      <div>
+        <h3>Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript &amp; TypeScript</li>
+          <li>HTML &amp; CSS</li>
+          <li>Java</li>
+          <li>C#</li>
+          <li>SQL</li>
+          <li>Google Apps Script</li>
+          <li>Arduino (ESP32)</li>
+          <li>Scratch (where I started)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Frameworks &amp; tools</h3>
+        <ul>
+          <li>React, Vite, Tailwind</li>
+          <li>FastAPI, Supabase</li>
+          <li>Unity</li>
+          <li>pygame, OpenCV</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Making things</h3>
+        <ul>
+          <li>3D printing</li>
+          <li>CAD (FreeCAD) &amp; BrickLink Studio</li>
+          <li>Rapid prototyping</li>
+          <li>Learning: electronics &amp; soldering</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">What to know before you work with me.</p>
+    <div class="honest">
+      <strong>I learn fast and I don't mind breaking things and redoing them.</strong>
+      I'm good at starting projects, and I've noticed I tend to stall on the last 20%. I'm fixing that by shipping smaller things and finishing them. Electronics and soldering are my weakest area right now, and I'm working on it.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Abhiraaj Rampal &middot; <a href="https://github.com/abhiraajr">github.com/abhiraajr</a>
+  </div>
+</footer>
+
+</body>
+</html>
